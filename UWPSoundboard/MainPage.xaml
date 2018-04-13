@@ -16,6 +16,7 @@
         </Grid.RowDefinitions>
 
         <RelativePanel>
+            <!-- creates a hamburger style menu -->
             <Button Name="HamburgerButton"
                     RelativePanel.AlignBottomWithPanel="True"
                     Click="HamburgerButton_Click"
@@ -24,7 +25,7 @@
                     Height="50"
                     Width="44"
                     Content="&#xE700;"/>
-            
+            <!-- creates a back button -->
             <Button Name="BackButton"
                     RelativePanel.RightOf="HamburgerButton"
                     Click="BackButton_Click"
@@ -43,7 +44,7 @@
 
 
             <SplitView.Pane>
-
+                <!-- creates a panel on L-H-S of the app to contain icons -->
                 <ListView Name ="MenuItemsListView" 
                                 IsItemClickEnabled="True"
                                 ItemsSource="{x:Bind MenuItems}"
@@ -73,7 +74,7 @@
             </SplitView.Pane>
             
             <SplitView.Content>
-                
+                <!-- creates a grid that holds the images used to play the sounds -->
                 <Grid Margin="20,20,0,0">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto"/>
